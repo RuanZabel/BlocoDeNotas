@@ -1,5 +1,6 @@
 package com.example.bloconotas;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Notas nota = new Notas(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -25,5 +27,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
