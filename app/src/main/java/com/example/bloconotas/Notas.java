@@ -17,15 +17,15 @@ public class Notas {
 
     public String recuperarNota(){
         if(this.notas.contains("notas")){
-            String s = context.getResources().getString(R.string.nota_recuperada);
+            String s = "Salvo";
             Toast.makeText(this.context,s,Toast.LENGTH_LONG).show();
             return this.notas.getString("notas","");
         }else {
             return "";
         }
     }
-    public void guardarNota(String valor){
-        editor.putString("notas",valor);
-        editor.commit();
+    public void salvarNota(String texto){
+        this.editor.putString("notas",texto);
+        this.editor.commit();
     }
 }
